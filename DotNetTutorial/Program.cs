@@ -173,7 +173,13 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
                     await batchClient.PoolOperations.DeletePoolAsync(PoolId);
                 }
 
-                List<string> ouFiles = new List<string>(System.IO.Directory.GetFiles( Environment.GetEnvironmentVariable("TEMP"), "*_ou ;
+                //List<string> outFiles = new List<string>(System.IO.Directory.GetFiles( Environment.GetEnvironmentVariable("TEMP"), "*_out.zip",SearchOption.TopDirectoryOnly)) ;
+                //foreach (string outFilePath in outFiles)
+                //{
+                //    string outFile = System.IO.Path.GetFileName(outFilePath);
+                //    string desPath = System.IO.Directory.GetCurrentDirectory() + outFile;
+                //    System.IO.File.Move(outFile, desPath);
+                //}
 
             }
         }
@@ -299,7 +305,7 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
                 pool = batchClient.PoolOperations.CreatePool(
                     poolId: poolId,
                     //targetDedicatedComputeNodes: 3,                                             // 3 compute nodes
-                    targetDedicatedComputeNodes: 2,                                             // 3 compute nodes
+                    targetDedicatedComputeNodes: 3,                                             // 3 compute nodes
                     virtualMachineSize: "standard_d1_v2",                                       // single-core, 3.5 GB memory, 50 GB disk
                     cloudServiceConfiguration: new CloudServiceConfiguration(osFamily: "5"));   // Windows Server 2016
 
