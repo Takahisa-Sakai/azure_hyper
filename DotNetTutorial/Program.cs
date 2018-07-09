@@ -373,9 +373,10 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
             // Create each of the tasks. Because we copied the task application to the
             // node's shared directory with the pool's StartTask, we can access it via
             // the shared directory on whichever node each task will run.
-            //foreach (ResourceFile inputFile in inputFiles)
-            //{
-            //string taskId = "topNtask" + inputFiles.IndexOf(inputFile);
+            foreach (ResourceFile inputFile in inputFiles)
+            {
+                string taskId = "azure_hyper" + inputFiles.IndexOf(inputFile);
+                string inputFileName = inputFile.FilePath;
             //string taskCommandLine =
             //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe {inputFile.FilePath} 3 \"{outputContainerSasUrl}\"";
             //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe {inputFile.FilePath} \"{outputContainerSasUrl}\"";
