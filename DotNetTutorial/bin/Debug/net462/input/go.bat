@@ -1,0 +1,1 @@
+HyperSD257.exe < OPNTXT_P1.dat
