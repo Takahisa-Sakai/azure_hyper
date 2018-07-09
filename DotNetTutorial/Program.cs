@@ -172,6 +172,15 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
                 {
                     await batchClient.PoolOperations.DeletePoolAsync(PoolId);
                 }
+
+                //List<string> outFiles = new List<string>(System.IO.Directory.GetFiles( Environment.GetEnvironmentVariable("TEMP"), "*_out.zip",SearchOption.TopDirectoryOnly)) ;
+                //foreach (string outFilePath in outFiles)
+                //{
+                //    string outFile = System.IO.Path.GetFileName(outFilePath);
+                //    string desPath = System.IO.Directory.GetCurrentDirectory() + outFile;
+                //    System.IO.File.Move(outFile, desPath);
+                //}
+
             }
         }
 
@@ -296,7 +305,7 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
                 pool = batchClient.PoolOperations.CreatePool(
                     poolId: poolId,
                     //targetDedicatedComputeNodes: 3,                                             // 3 compute nodes
-                    targetDedicatedComputeNodes: 2,                                             // 3 compute nodes
+                    targetDedicatedComputeNodes: 3,                                             // 3 compute nodes
                     virtualMachineSize: "standard_d1_v2",                                       // single-core, 3.5 GB memory, 50 GB disk
                     cloudServiceConfiguration: new CloudServiceConfiguration(osFamily: "5"));   // Windows Server 2016
 
@@ -377,29 +386,30 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
             {
                 string taskId = "azure_hyper" + inputFiles.IndexOf(inputFile);
                 string inputFileName = inputFile.FilePath;
-            //string taskCommandLine =
-            //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe {inputFile.FilePath} 3 \"{outputContainerSasUrl}\"";
-            //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe {inputFile.FilePath} \"{outputContainerSasUrl}\"";
+                string outputFileName = inputFileName + "_out.zip";
+                //string taskCommandLine =
+                //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe {inputFile.FilePath} 3 \"{outputContainerSasUrl}\"";
+                //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe {inputFile.FilePath} \"{outputContainerSasUrl}\"";
 
-            //CloudTask task = new CloudTask(taskId, taskCommandLine);
-            //tasks.Add(task);
-            //}
-            //string taskId = "topNtask" + inputFiles.IndexOf(inputFile);
-            //string taskId = "Hyper";
-            //string taskDirPath = %AZ_BATCH_TASK_DIR%;
+                //CloudTask task = new CloudTask(taskId, taskCommandLine);
+                //tasks.Add(task);
+                //}
+                //string taskId = "topNtask" + inputFiles.IndexOf(inputFile);
+                //string taskId = "Hyper";
+                //string taskDirPath = %AZ_BATCH_TASK_DIR%;
                 string taskCommandLine = 
-            //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe {inputFile.FilePath} 3 \"{outputContainerSasUrl}\"";
-                    $"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe \"{inputFileName}\" \"{outputContainerSasUrl}\"";
-            //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe \"{outputContainerSasUrl}\"";
+                //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe {inputFile.FilePath} 3 \"{outputContainerSasUrl}\"";
+                    $"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe \"{inputFileName}\" \"{outputContainerSasUrl}\" \"{outputFileName}\"";
+                //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe \"{outputContainerSasUrl}\"";
 
                 CloudTask task = new CloudTask(taskId, taskCommandLine);
                 //task.FilesToStage = new List<IFileStagingProvider>();
-            // generate a local file in temp directory
+                // generate a local file in temp directory
 
                 task.ResourceFiles = new List<ResourceFile>();
-            //task.ResourceFiles = new List<ResourceFile>();
-            //foreach( ResourceFile inputFile in inputFiles)
-            //{
+                //task.ResourceFiles = new List<ResourceFile>();
+                //foreach( ResourceFile inputFile in inputFiles)
+                //{
                 task.ResourceFiles.Add(inputFile);
                 tasks.Add(task);
             };
