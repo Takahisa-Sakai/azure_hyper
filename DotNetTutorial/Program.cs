@@ -393,10 +393,10 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
             //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe \"{outputContainerSasUrl}\"";
 
                 CloudTask task = new CloudTask(taskId, taskCommandLine);
-                task.FilesToStage = new List<IFileStagingProvider>();
+                //task.FilesToStage = new List<IFileStagingProvider>();
             // generate a local file in temp directory
 
-            //    task.ResourceFiles = new List<ResourceFile> { inputFile};
+                task.ResourceFiles = new List<ResourceFile>();
             //task.ResourceFiles = new List<ResourceFile>();
             //foreach( ResourceFile inputFile in inputFiles)
             //{
