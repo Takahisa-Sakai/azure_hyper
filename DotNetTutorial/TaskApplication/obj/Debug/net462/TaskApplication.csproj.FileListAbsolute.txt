@@ -10,3 +10,15 @@ C:\Users\0800355\Documents\azure_batch\CSharp\ArticleProjects\DotNetTutorial\Tas
 C:\Users\0800355\Documents\azure_batch\CSharp\ArticleProjects\DotNetTutorial\TaskApplication\obj\Debug\net462\TaskApplication.csproj.CopyComplete
 C:\Users\0800355\Documents\azure_batch\CSharp\ArticleProjects\DotNetTutorial\TaskApplication\obj\Debug\net462\TaskApplication.exe
 C:\Users\0800355\Documents\azure_batch\CSharp\ArticleProjects\DotNetTutorial\TaskApplication\obj\Debug\net462\TaskApplication.pdb
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\bin\Debug\net462\TaskApplication.exe
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\bin\Debug\net462\TaskApplication.pdb
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\bin\Debug\net462\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\bin\Debug\net462\Newtonsoft.Json.dll
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\bin\Debug\net462\Microsoft.WindowsAzure.Storage.dll
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\obj\Debug\net462\TaskApplication.csprojAssemblyReference.cache
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\obj\Debug\net462\TaskApplication.csproj.CoreCompileInputs.cache
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\obj\Debug\net462\TaskApplication.AssemblyInfoInputs.cache
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\obj\Debug\net462\TaskApplication.AssemblyInfo.cs
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\obj\Debug\net462\TaskApplication.csproj.CopyComplete
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\obj\Debug\net462\TaskApplication.exe
+C:\Users\0800355\Documents\azure_hyper\DotNetTutorial\TaskApplication\obj\Debug\net462\TaskApplication.pdb

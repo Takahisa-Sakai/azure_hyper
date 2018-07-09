@@ -308,11 +308,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\0800355\\Documents\\azure_batch\\CSharp\\ArticleProjects\\DotNetTutorial\\DotNetTutorial.csproj",
+      "projectUniqueName": "C:\\Users\\0800355\\Documents\\azure_hyper\\DotNetTutorial\\DotNetTutorial.csproj",
       "projectName": "DotNetTutorial",
-      "projectPath": "C:\\Users\\0800355\\Documents\\azure_batch\\CSharp\\ArticleProjects\\DotNetTutorial\\DotNetTutorial.csproj",
+      "projectPath": "C:\\Users\\0800355\\Documents\\azure_hyper\\DotNetTutorial\\DotNetTutorial.csproj",
       "packagesPath": "C:\\Users\\0800355\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\0800355\\Documents\\azure_batch\\CSharp\\ArticleProjects\\DotNetTutorial\\obj\\",
+      "outputPath": "C:\\Users\\0800355\\Documents\\azure_hyper\\DotNetTutorial\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -331,8 +331,8 @@
       "frameworks": {
         "net462": {
           "projectReferences": {
-            "C:\\Users\\0800355\\Documents\\azure_batch\\CSharp\\ArticleProjects\\DotNetTutorial\\TaskApplication\\TaskApplication.csproj": {
-              "projectPath": "C:\\Users\\0800355\\Documents\\azure_batch\\CSharp\\ArticleProjects\\DotNetTutorial\\TaskApplication\\TaskApplication.csproj"
+            "C:\\Users\\0800355\\Documents\\azure_hyper\\DotNetTutorial\\TaskApplication\\TaskApplication.csproj": {
+              "projectPath": "C:\\Users\\0800355\\Documents\\azure_hyper\\DotNetTutorial\\TaskApplication\\TaskApplication.csproj"
             }
           }
         }

@@ -28,16 +28,18 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial.TaskApplication
             // The first argument passed to this executable should be the path to a text file to be processed.
             // The path may include a compute node's environment variables, such as %AZ_BATCH_NODE_SHARED_DIR%\filename.txt
             //string inputFile = args[0];
-            
+
             // The second argument passed to this executable is a number specifying how many words should
             // be returned based on their highest count within the specified file (e.g. 3 would return the
             // top 3 words found).
             //int numTopN = int.Parse(args[1]);
+            string inputFileName = args[0];
 
             // The third argument should be the shared access signature for the container in Azure Storage
             // to which this task application will upload its output. This shared access signature should
             // provide WRITE access to the container.
-            string outputContainerSas = args[0];
+            string outputContainerSas = args[1];
+            
             //string taskdir = args[1];
 
             // Read all of the text contained in the input file
@@ -72,7 +74,7 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial.TaskApplication
             //file.WriteLine("Pool: " + Environment.GetEnvironmentVariable("AZ_BATCH_POOL_ID"));
             //}
             System.IO.Compression.ZipFile.ExtractToDirectory(
-                @"input.zip",
+                inputFileName,
                 @".\ext");
             Console.WriteLine("Start Hyper");
             System.IO.Directory.SetCurrentDirectory(@".\ext\input");
