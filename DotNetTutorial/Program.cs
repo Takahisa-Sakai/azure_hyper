@@ -147,9 +147,9 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
                 await DownloadBlobsFromContainerAsync(blobClient, outputContainerName, Environment.GetEnvironmentVariable("TEMP"));
 
                 // Clean up Storage resources
-                //await DeleteContainerAsync(blobClient, appContainerName);
-                //await DeleteContainerAsync(blobClient, inputContainerName);
-                //await DeleteContainerAsync(blobClient, outputContainerName);
+                await DeleteContainerAsync(blobClient, appContainerName);
+                await DeleteContainerAsync(blobClient, inputContainerName);
+                await DeleteContainerAsync(blobClient, outputContainerName);
 
                 // Print out some timing info
                 timer.Stop();
