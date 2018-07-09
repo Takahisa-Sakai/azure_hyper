@@ -109,7 +109,15 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
                 //@"taskdata2.txt",
                 //@"taskdata3.txt"
                 @"model1.zip",
-                @"model2.zip"
+                @"model2.zip",
+                @"model3.zip",
+                @"model4.zip",
+                @"model5.zip",
+                @"model6.zip",
+                @"model7.zip",
+                @"model8.zip",
+                @"model9.zip",
+                @"model10.zip"
             };
 
             // Upload the application and its dependencies to Azure Storage. This is the application that will
