@@ -108,11 +108,8 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
                 //@"taskdata1.txt",
                 //@"taskdata2.txt",
                 //@"taskdata3.txt"
-                @"input.zip",
-                //@"OPNTXT_P1.dat",
-                //@"fort.30",
-                //@"HyperSD257.exe",
-                //@"go.bat"
+                @"model1.zip",
+                @"model2.zip"
             };
 
             // Upload the application and its dependencies to Azure Storage. This is the application that will
