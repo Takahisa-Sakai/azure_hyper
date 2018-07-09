@@ -384,33 +384,24 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
             //tasks.Add(task);
             //}
             //string taskId = "topNtask" + inputFiles.IndexOf(inputFile);
-            string taskId = "Hyper";
+            //string taskId = "Hyper";
             //string taskDirPath = %AZ_BATCH_TASK_DIR%;
-            string taskCommandLine = 
+                string taskCommandLine = 
             //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe {inputFile.FilePath} 3 \"{outputContainerSasUrl}\"";
-                $"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe \"{outputContainerSasUrl}\"";
+                    $"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe \"{inputFileName}\" \"{outputContainerSasUrl}\"";
             //$"cmd /c %AZ_BATCH_NODE_SHARED_DIR%\\TaskApplication.exe \"{outputContainerSasUrl}\"";
 
-            CloudTask task = new CloudTask(taskId, taskCommandLine);
-            task.FilesToStage = new List<IFileStagingProvider>();
+                CloudTask task = new CloudTask(taskId, taskCommandLine);
+                task.FilesToStage = new List<IFileStagingProvider>();
             // generate a local file in temp directory
-            //string localSampleFile ="OPNTXT_P1.dat";
-            //string fort30File = "fort.30";
-            //string hyperExeFile =  "HyperSD257.exe";
-            //string hyperBatFile = "go.bat";
 
-            //StagingStorageAccount fileStagingStorageAccount = new StagingStorageAccount(
-                //storageAccount: this.accountSettings.StorageAccountName,
-                //storageAccountKey: this.accountSettings.StorageAccountKey,
-                //blobEndpoint: cloudStorageAccount.BlobEndpoint.ToString());
-
-            task.ResourceFiles = new List<ResourceFile> { inputFiles[0]};
+            //    task.ResourceFiles = new List<ResourceFile> { inputFile};
             //task.ResourceFiles = new List<ResourceFile>();
             //foreach( ResourceFile inputFile in inputFiles)
             //{
-            //    task.ResourceFiles.Add(inputFile);
-            //};
-            tasks.Add(task);
+                task.ResourceFiles.Add(inputFile);
+                tasks.Add(task);
+            };
 
             // Add the tasks as a collection opposed to a separate AddTask call for each. Bulk task submission
             // helps to ensure efficient underlying API calls to the Batch service.
