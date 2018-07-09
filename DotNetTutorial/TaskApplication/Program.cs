@@ -56,7 +56,7 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial.TaskApplication
 
             // Send the output to text file
             //string outputFile = String.Format("{0}_OUTPUT{1}", Path.GetFileNameWithoutExtension(inputFile), Path.GetExtension(inputFile));
-            string outputFile = "out.zip";
+            string outputFile =inputFileName + "_out.zip";
             //using (System.IO.StreamWriter file = new System.IO.StreamWriter(outputFile))
             //{
             //file.WriteLine("Count\tWord");
