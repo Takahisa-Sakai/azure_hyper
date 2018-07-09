@@ -296,7 +296,7 @@ namespace Microsoft.Azure.Batch.Samples.DotNetTutorial
                 pool = batchClient.PoolOperations.CreatePool(
                     poolId: poolId,
                     //targetDedicatedComputeNodes: 3,                                             // 3 compute nodes
-                    targetDedicatedComputeNodes: 1,                                             // 3 compute nodes
+                    targetDedicatedComputeNodes: 2,                                             // 3 compute nodes
                     virtualMachineSize: "standard_d1_v2",                                       // single-core, 3.5 GB memory, 50 GB disk
                     cloudServiceConfiguration: new CloudServiceConfiguration(osFamily: "5"));   // Windows Server 2016
 
